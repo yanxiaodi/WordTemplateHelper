@@ -5,6 +5,10 @@ VisualStudioVersion = 15.0.26228.9
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WordTemplateHelperApi", "WordTemplateHelperApi\WordTemplateHelperApi.csproj", "{778C2B6A-8B81-40AF-821C-511C4515B83D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WordTemplateHelper", "WordTemplateHelper\WordTemplateHelper.csproj", "{75D29F27-5AAB-4400-9F26-8665034A300D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WordTemplateHelperWeb", "WordTemplateHelperWeb\WordTemplateHelperWeb.csproj", "{49DC50EA-AE46-4350-9E31-05EFE52DFD19}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,16 @@ Global
 		{778C2B6A-8B81-40AF-821C-511C4515B83D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{778C2B6A-8B81-40AF-821C-511C4515B83D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{778C2B6A-8B81-40AF-821C-511C4515B83D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{75D29F27-5AAB-4400-9F26-8665034A300D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75D29F27-5AAB-4400-9F26-8665034A300D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75D29F27-5AAB-4400-9F26-8665034A300D}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{75D29F27-5AAB-4400-9F26-8665034A300D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75D29F27-5AAB-4400-9F26-8665034A300D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{75D29F27-5AAB-4400-9F26-8665034A300D}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{49DC50EA-AE46-4350-9E31-05EFE52DFD19}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{49DC50EA-AE46-4350-9E31-05EFE52DFD19}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{49DC50EA-AE46-4350-9E31-05EFE52DFD19}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{49DC50EA-AE46-4350-9E31-05EFE52DFD19}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

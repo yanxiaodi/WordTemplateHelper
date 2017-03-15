@@ -1,0 +1,7 @@
+False
+465d806c-1f17-40b0-b778-233a1a941364a921d47b-96ee-417f-a471-9aa625e63feb
+{a1702570-6b1d-4ed5-8d8e-095edb3beb78}{b8affd5f-b5db-4ee9-8673-0a45542093c6}
+{429cd787-b32b-49cd-b4bc-e7e014fe31ee}
+1.0.0.0
+WordTemplateHelper
+_layouts/15/

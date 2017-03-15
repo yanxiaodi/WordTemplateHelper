@@ -1,0 +1,2 @@
+bin\Debug\OfficeAppManifests\WordTemplateHelperManifest.xml
+E:\Source\Repos\yxd\WordTemplateHelper\WordTemplateHelper\WordTemplateHelper\bin\Debug\WordTemplateHelper.debugapp
