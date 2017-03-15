@@ -7,6 +7,8 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using WordTemplateHelperApi.Data;
+using Microsoft.EntityFrameworkCore;
 
 namespace WordTemplateHelperApi
 {
@@ -28,6 +30,8 @@ namespace WordTemplateHelperApi
         public void ConfigureServices(IServiceCollection services)
         {
             // Add framework services.
+            services.AddDbContext<WordTemplateContext>(options =>
+            options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
             services.AddMvc();
         }
 

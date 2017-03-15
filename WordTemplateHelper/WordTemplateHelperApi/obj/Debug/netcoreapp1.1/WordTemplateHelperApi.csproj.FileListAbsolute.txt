@@ -2,8 +2,8 @@ E:\Source\Repos\yxd\WordTemplateHelper\WordTemplateHelper\WordTemplateHelperApi\
 E:\Source\Repos\yxd\WordTemplateHelper\WordTemplateHelper\WordTemplateHelperApi\bin\Debug\netcoreapp1.1\WordTemplateHelperApi.runtimeconfig.json
 E:\Source\Repos\yxd\WordTemplateHelper\WordTemplateHelper\WordTemplateHelperApi\bin\Debug\netcoreapp1.1\WordTemplateHelperApi.runtimeconfig.dev.json
 E:\Source\Repos\yxd\WordTemplateHelper\WordTemplateHelper\WordTemplateHelperApi\bin\Debug\netcoreapp1.1\WordTemplateHelperApi.dll
-E:\Source\Repos\yxd\WordTemplateHelper\WordTemplateHelper\WordTemplateHelperApi\obj\Debug\netcoreapp1.1\WordTemplateHelperApi.csprojResolveAssemblyReference.cache
 E:\Source\Repos\yxd\WordTemplateHelper\WordTemplateHelper\WordTemplateHelperApi\obj\Debug\netcoreapp1.1\WordTemplateHelperApi.AssemblyInfo.cs
 E:\Source\Repos\yxd\WordTemplateHelper\WordTemplateHelper\WordTemplateHelperApi\bin\Debug\netcoreapp1.1\WordTemplateHelperApi.pdb
 E:\Source\Repos\yxd\WordTemplateHelper\WordTemplateHelper\WordTemplateHelperApi\obj\Debug\netcoreapp1.1\WordTemplateHelperApi.dll
 E:\Source\Repos\yxd\WordTemplateHelper\WordTemplateHelper\WordTemplateHelperApi\obj\Debug\netcoreapp1.1\WordTemplateHelperApi.pdb
+E:\Source\Repos\yxd\WordTemplateHelper\WordTemplateHelper\WordTemplateHelperApi\obj\Debug\netcoreapp1.1\WordTemplateHelperApi.csprojResolveAssemblyReference.cache
