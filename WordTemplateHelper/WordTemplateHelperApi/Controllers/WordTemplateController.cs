@@ -23,7 +23,7 @@ namespace WordTemplateHelperApi.Controllers
 
 
         [HttpPost]
-        public ResponseResultInfo AddWordTemplate(string userId, string organizationId, TemplateType type, [FromBody]WordTemplateInfo item)
+        public async Task<ResponseResultInfo> AddWordTemplate(string userId, string organizationId, TemplateType type, [FromBody]WordTemplateInfo item)
         {
             ResponseResultInfo respResult = new ResponseResultInfo();
             try
@@ -40,7 +40,7 @@ namespace WordTemplateHelperApi.Controllers
                         priTmp.Id = Guid.NewGuid().ToString();
                         priTmp.TemplateId = item.Id;
                         priTmp.UserId = userId;
-                        _context.PrivateTemplateInfoes.Add(priTmp);
+                        await _context.PrivateTemplateInfoes.AddAsync(priTmp);
                         break;
                     case TemplateType.Public:
                         break;
@@ -50,7 +50,7 @@ namespace WordTemplateHelperApi.Controllers
                         orgTmp.Id = Guid.NewGuid().ToString();
                         orgTmp.TemplateId = item.Id;
                         orgTmp.OrganizationId = organizationId;
-                        _context.OrganizationTemplateInfoes.Add(orgTmp);
+                        await _context.OrganizationTemplateInfoes.AddAsync(orgTmp);
                         break;
                     default:
                         break;
@@ -69,13 +69,13 @@ namespace WordTemplateHelperApi.Controllers
         }
 
         [HttpGet]
-        public ResponseResultInfo<List<WordTemplateInfo>> SearchWordTemplateList(string keyword)
+        public async Task<ResponseResultInfo<List<WordTemplateInfo>>> SearchWordTemplateList(string keyword)
         {
             ResponseResultInfo<List<WordTemplateInfo>> respResult = new ResponseResultInfo<List<WordTemplateInfo>>();
             try
             {
 
-                List<WordTemplateInfo> list = _context.WordTemplateInfoes.Where(x => x.Type == TemplateType.Public && x.Name.Contains(keyword)).OrderByDescending(x => x.CreateTime).ToList();
+                List<WordTemplateInfo> list = await _context.WordTemplateInfoes.Where(x => x.Type == TemplateType.Public && x.Name.Contains(keyword)).OrderByDescending(x => x.CreateTime).ToListAsync();
                 respResult.IsSuccess = true;
                 respResult.Result = list;
                 return respResult;
@@ -91,13 +91,13 @@ namespace WordTemplateHelperApi.Controllers
         }
 
         [HttpGet]
-        public ResponseResultInfo<List<WordTemplateInfo>> GetMyPrivateTemplateList(string userId)
+        public async Task<ResponseResultInfo<List<WordTemplateInfo>>> GetMyPrivateTemplateList(string userId)
         {
             ResponseResultInfo<List<WordTemplateInfo>> respResult = new ResponseResultInfo<List<WordTemplateInfo>>();
             try
             {
                 List<string> listIds = _context.PrivateTemplateInfoes.Where(x => x.UserId == userId).OrderByDescending(x => x.CreateTime).Select(x => x.TemplateId).ToList();
-                List<WordTemplateInfo> list = _context.WordTemplateInfoes.Where(x => listIds.Contains(x.Id)).ToList();
+                List<WordTemplateInfo> list = await _context.WordTemplateInfoes.Where(x => listIds.Contains(x.Id)).ToListAsync();
                 respResult.IsSuccess = true;
                 respResult.Result = list;
                 return respResult;
@@ -111,7 +111,7 @@ namespace WordTemplateHelperApi.Controllers
         }
 
         [HttpPost]
-        public ResponseResultInfo AddMyFavoriteTemplate(string userId, [FromBody]WordTemplateInfo item)
+        public async Task<ResponseResultInfo> AddMyFavoriteTemplate(string userId, [FromBody]WordTemplateInfo item)
         {
             ResponseResultInfo respResult = new ResponseResultInfo();
             try
@@ -120,7 +120,7 @@ namespace WordTemplateHelperApi.Controllers
                 info.Id = Guid.NewGuid().ToString();
                 info.TemplateId = item.Id;
                 info.UserId = userId;
-                _context.UserFavoriteInfoes.Add(info);
+                await _context.UserFavoriteInfoes.AddAsync(info);
                 _context.SaveChanges();
                 respResult.IsSuccess = true;
                 return respResult;
@@ -134,13 +134,13 @@ namespace WordTemplateHelperApi.Controllers
         }
 
         [HttpGet]
-        public ResponseResultInfo<List<WordTemplateInfo>> GetMyFavoriteTemplateList(string userId)
+        public async Task<ResponseResultInfo<List<WordTemplateInfo>>> GetMyFavoriteTemplateList(string userId)
         {
             ResponseResultInfo<List<WordTemplateInfo>> respResult = new ResponseResultInfo<List<WordTemplateInfo>>();
             try
             {
                 List<string> listIds = _context.UserFavoriteInfoes.Where(x => x.UserId == userId).OrderByDescending(x => x.CreateTime).Select(x => x.TemplateId).ToList();
-                List<WordTemplateInfo> list = _context.WordTemplateInfoes.Where(x => listIds.Contains(x.Id)).ToList();
+                List<WordTemplateInfo> list = await _context.WordTemplateInfoes.Where(x => listIds.Contains(x.Id)).ToListAsync();
                 respResult.IsSuccess = true;
                 respResult.Result = list;
                 return respResult;
@@ -155,7 +155,7 @@ namespace WordTemplateHelperApi.Controllers
 
 
         [HttpPost]
-        public ResponseResultInfo AddOrganizationTemplate(string orgId, [FromBody]WordTemplateInfo item)
+        public async Task<ResponseResultInfo> AddOrganizationTemplate(string orgId, [FromBody]WordTemplateInfo item)
         {
             ResponseResultInfo respResult = new ResponseResultInfo();
             try
@@ -164,7 +164,7 @@ namespace WordTemplateHelperApi.Controllers
                 info.Id = Guid.NewGuid().ToString();
                 info.TemplateId = item.Id;
                 info.OrganizationId = orgId;
-                _context.OrganizationTemplateInfoes.Add(info);
+                await _context.OrganizationTemplateInfoes.AddAsync(info);
                 _context.SaveChanges();
                 respResult.IsSuccess = true;
                 return respResult;
@@ -178,13 +178,13 @@ namespace WordTemplateHelperApi.Controllers
         }
 
         [HttpGet]
-        public ResponseResultInfo<List<WordTemplateInfo>> GetOrganizationTemplateList(string orgId)
+        public async Task<ResponseResultInfo<List<WordTemplateInfo>>> GetOrganizationTemplateList(string orgId)
         {
             ResponseResultInfo<List<WordTemplateInfo>> respResult = new ResponseResultInfo<List<WordTemplateInfo>>();
             try
             {
                 List<string> listIds = _context.OrganizationTemplateInfoes.Where(x => x.OrganizationId == orgId).OrderByDescending(x => x.CreateTime).Select(x => x.TemplateId).ToList();
-                List<WordTemplateInfo> list = _context.WordTemplateInfoes.Where(x => listIds.Contains(x.Id)).ToList();
+                List<WordTemplateInfo> list = await _context.WordTemplateInfoes.Where(x => listIds.Contains(x.Id)).ToListAsync();
                 respResult.IsSuccess = true;
                 respResult.Result = list;
                 return respResult;

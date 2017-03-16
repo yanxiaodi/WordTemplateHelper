@@ -36,7 +36,7 @@
     <Host Name="Document" />
   </Hosts>
   <DefaultSettings>
-    <SourceLocation DefaultValue="https://localhost:44305/Home.html" />
+    <SourceLocation DefaultValue="http://localhost/index.html" />
   </DefaultSettings>
   <!-- 结束任务窗格模式集成。  -->
 
@@ -121,7 +121,8 @@
       </bt:Images>
       <bt:Urls>
         <bt:Url id="Contoso.DesktopFunctionFile.Url" DefaultValue="https://localhost:44305/Functions/FunctionFile.html" />
-        <bt:Url id="Contoso.Taskpane.Url" DefaultValue="https://localhost:44305/Home.html" />
+        <!--<bt:Url id="Contoso.Taskpane.Url" DefaultValue="https://localhost:44305/Home.html" />-->
+        <bt:Url id="Contoso.Taskpane.Url" DefaultValue="http://localhost/index.html" />
         <bt:Url id="Contoso.GetStarted.LearnMoreUrl" DefaultValue="https://go.microsoft.com/fwlink/?LinkId=276812" />
       </bt:Urls>
       <!-- ShortStrings 最大字符数==125。 -->
