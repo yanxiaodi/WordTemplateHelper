@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WordTemplateHelper", "WordT
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WordTemplateHelperWeb", "WordTemplateHelperWeb\WordTemplateHelperWeb.csproj", "{56C9622A-8EFC-4791-A8FA-20BCF72A9889}"
 EndProject
-Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "WordTemplateHelperSource(1)", "WordTemplateHelperSource\", "{AE1F745B-C11F-4E53-B6F9-B7E2FCBABD94}"
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "WordTemplateHelperSource", "WordTemplateHelperSource\", "{AE1F745B-C11F-4E53-B6F9-B7E2FCBABD94}"
 	ProjectSection(WebsiteProperties) = preProject
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
 		Debug.AspNetCompiler.VirtualPath = "/localhost_62944"
@@ -27,6 +27,7 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "WordTemplateHelperSource(1)
 		Release.AspNetCompiler.FixedNames = "false"
 		Release.AspNetCompiler.Debug = "False"
 		VWDPort = "62944"
+		SlnRelativePath = "WordTemplateHelperSource\"
 	EndProjectSection
 EndProject
 Global
