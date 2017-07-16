@@ -29,8 +29,8 @@ export class WordTemplateApiService {
         return promise;
     }
 
-    /**搜索
-     * 
+    /**
+     * search
      * 
      * @param {string} keyword
      * @returns {Promise<ResponseResultInfo<Array<WordTemplateInfo>>>}

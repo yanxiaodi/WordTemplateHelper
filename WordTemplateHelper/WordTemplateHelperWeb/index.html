@@ -2,6 +2,73 @@
 <html>
 
 <head>
+    <style type="text/css">
+        /*body {
+            background-image: url('assets/img/loadingbg.jpg');
+        }*/
+        /*
+ *  Usage:
+ *
+      <div class="sk-three-bounce">
+        <div class="sk-child sk-bounce1"></div>
+        <div class="sk-child sk-bounce2"></div>
+        <div class="sk-child sk-bounce3"></div>
+      </div>
+ *
+ */
+        
+        .sk-three-bounce {
+            margin: 10px auto;
+            width: 80px;
+            text-align: center;
+        }
+        
+        .sk-three-bounce .sk-child {
+            width: 20px;
+            height: 20px;
+            background-color: #387ef5;
+            border-radius: 100%;
+            display: inline-block;
+            -webkit-animation: sk-three-bounce 1.4s ease-in-out 0s infinite both;
+            animation: sk-three-bounce 1.4s ease-in-out 0s infinite both;
+        }
+        
+        .sk-three-bounce .sk-bounce1 {
+            -webkit-animation-delay: -0.32s;
+            animation-delay: -0.32s;
+        }
+        
+        .sk-three-bounce .sk-bounce2 {
+            -webkit-animation-delay: -0.16s;
+            animation-delay: -0.16s;
+        }
+        
+        @-webkit-keyframes sk-three-bounce {
+            0%,
+            80%,
+            100% {
+                -webkit-transform: scale(0);
+                transform: scale(0);
+            }
+            40% {
+                -webkit-transform: scale(1);
+                transform: scale(1);
+            }
+        }
+        
+        @keyframes sk-three-bounce {
+            0%,
+            80%,
+            100% {
+                -webkit-transform: scale(0);
+                transform: scale(0);
+            }
+            40% {
+                -webkit-transform: scale(1);
+                transform: scale(1);
+            }
+        }
+    </style>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <title>WordTemplateHelperSource</title>
@@ -16,7 +83,17 @@
 <link href="styles.327cf658bc983a5e0c2f.bundle.css" rel="stylesheet"/></head>
 
 <body>
-    <app-root>Loading...</app-root>
-<script type="text/javascript" src="inline.d5e359a77b0cffcfc13e.bundle.js"></script><script type="text/javascript" src="polyfills.b3b5d62c3e256547f87c.bundle.js"></script><script type="text/javascript" src="vendor.41b80d66d02ebb3bba6b.bundle.js"></script><script type="text/javascript" src="main.4e4afe7bb4cca855a581.bundle.js"></script></body>
+    <app-root>
+        <div style="margin-top:200px;text-align:center;">
+            <img src="/app/assets/images/document.png" width="150" height="150" />
+            <div class="sk-three-bounce">
+                <div class="sk-child sk-bounce1"></div>
+                <div class="sk-child sk-bounce2"></div>
+                <div class="sk-child sk-bounce3"></div>
+            </div>
+            Loading...Please wait...
+        </div>
+    </app-root>
+<script type="text/javascript" src="inline.86064e5880fd559c4f79.bundle.js"></script><script type="text/javascript" src="polyfills.b3b5d62c3e256547f87c.bundle.js"></script><script type="text/javascript" src="vendor.41b80d66d02ebb3bba6b.bundle.js"></script><script type="text/javascript" src="main.fe1c15612b4f5c42418b.bundle.js"></script></body>
 
 </html>
