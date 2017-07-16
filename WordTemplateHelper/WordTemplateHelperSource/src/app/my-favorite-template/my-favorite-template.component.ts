@@ -1,6 +1,3 @@
-import { WordTemplateApiService } from './../services/word-template-api/word-template-api.service';
-import { WordDocumentService } from './../services/word-document/word-document.service';
-import { SettingsStorageService } from './../services/settings-storage/settings-storage.service';
 
 import { Component, AfterViewInit, ElementRef, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
@@ -10,6 +7,7 @@ import { ButtonComponent } from '../shared/button/button.component';
 import { BrandFooterComponent } from '../shared/brand-footer/brand.footer.component';
 
 // The SettingsStorageService provides CRUD operations on application settings.
+import { SettingsStorageService, WordTemplateApiService, WordDocumentService } from '../services/index';
 import { WordTemplateInfo } from '../models/index';
 @Component({
     templateUrl: './my-favorite-template.component.html',
@@ -20,12 +18,11 @@ export class MyFavoriteTemplateComponent {
     // Get references to the radio buttons so we can toggle which is selected.
     //    @ViewChild('always') alwaysRadioButton: ElementRef;
     //    @ViewChild('onlyFirstTime') onlyFirstTimeRadioButton: ElementRef;
-    public searchString: string;
-    public resultList: Array<WordTemplateInfo>;
+    private searchString: string;
+    private resultList: Array<WordTemplateInfo>;
     public message: string;
     public isShowMessage: boolean;
-    constructor(public settingsStorage: SettingsStorageService, public wordDocument: WordDocumentService, 
-        public wordTemplateApiService: WordTemplateApiService) {
+    constructor(private settingsStorage: SettingsStorageService, public wordDocument: WordDocumentService, public wordTemplateApiService: WordTemplateApiService) {
         this.searchString = "软件需求";
         this.resultList = [];
         this.isShowMessage = false;

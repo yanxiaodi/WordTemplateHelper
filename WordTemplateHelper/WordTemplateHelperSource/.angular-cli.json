@@ -19,8 +19,8 @@
         "prefix": "app",
         "styles": [
             "styles.css",
-            "app/assets/styles/fabric.components.min.css",
-            "app/assets/styles/fabric.min.css"
+            "assets/styles/fabric.components.min.css",
+            "assets/styles/fabric.min.css"
         ],
         "scripts": [],
         "environmentSource": "environments/environment.ts",

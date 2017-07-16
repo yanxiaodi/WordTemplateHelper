@@ -1,6 +1,3 @@
-import { WordTemplateApiService } from './../services/word-template-api/word-template-api.service';
-import { SettingsStorageService } from './../services/settings-storage/settings-storage.service';
-import { WordDocumentService } from './../services/word-document/word-document.service';
 
 
 import { Component, } from '@angular/core';
@@ -12,7 +9,9 @@ import { NavigationHeaderComponent } from '../shared/navigation-header/navigatio
 import { BrandFooterComponent } from '../shared/brand-footer/brand.footer.component';
 
 // The WordDocumentService provides methods for manipulating the document.
+import { WordDocumentService } from '../services/word-document/word.document.service';
 // The SettingsStorageService provides CRUD operations on application settings..
+import { SettingsStorageService, WordTemplateApiService } from '../services/index';
 import { BaseResponseResultInfo, WordTemplateInfo, TemplateType } from '../models/index';
 
 @Component({
@@ -27,10 +26,10 @@ export class AddTemplateComponent {
     public message: string;
     public isShowMessage: boolean;
 
-    constructor(public wordDocument: WordDocumentService,
-        public settingsStorage: SettingsStorageService,
+    constructor(private wordDocument: WordDocumentService,
+        private settingsStorage: SettingsStorageService,
         public wordTemplateApiService: WordTemplateApiService,
-        public router: Router) {
+        private router: Router) {
         this.templateName = "";
         this.isShowMessage = false;
     }

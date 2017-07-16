@@ -15,7 +15,7 @@ import { ButtonComponent } from '../shared/button/button.component';
 import { BrandFooterComponent} from '../shared/brand-footer/brand.footer.component';
 
 // The SettingsStorageService provides CRUD operations on application settings.
-import { SettingsStorageService } from '../services/settings-storage/settings-storage.service';
+import { SettingsStorageService } from '../services/settings-storage/settings.storage.service';
 
 @Component({
     templateUrl: './settings.component.html',

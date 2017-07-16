@@ -31,3 +31,4 @@ E:\Source\Repos\yxd\WordTemplateHelper\WordTemplateHelper\WordTemplateHelperWeb\
 E:\Source\Repos\yxd\WordTemplateHelper\WordTemplateHelper\WordTemplateHelperWeb\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 E:\Source\Repos\yxd\WordTemplateHelper\WordTemplateHelper\WordTemplateHelperWeb\obj\Debug\WordTemplateHelperWeb.dll
 E:\Source\Repos\yxd\WordTemplateHelper\WordTemplateHelper\WordTemplateHelperWeb\obj\Debug\WordTemplateHelperWeb.pdb
+E:\Source\Repos\yxd\WordTemplateHelper\WordTemplateHelper\WordTemplateHelperWeb\obj\Debug\WordTemplateHelperWeb.csprojResolveAssemblyReference.cache

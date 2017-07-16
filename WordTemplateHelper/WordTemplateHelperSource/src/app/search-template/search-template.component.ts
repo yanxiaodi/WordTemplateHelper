@@ -14,11 +14,11 @@ import { WordTemplateInfo } from '../models/index';
 })
 export class SearchTemplateComponent implements OnInit {
 
-  public searchString: string;
-  public resultList: Array<WordTemplateInfo>;
+  private searchString: string;
+  private resultList: Array<WordTemplateInfo>;
   public message: string;
   public isShowMessage: boolean;
-  constructor(public settingsStorage: SettingsStorageService, public wordDocument: WordDocumentService, public wordTemplateApiService: WordTemplateApiService) {
+  constructor(private settingsStorage: SettingsStorageService, public wordDocument: WordDocumentService, public wordTemplateApiService: WordTemplateApiService) {
     this.searchString = "";
     this.resultList = [];
     this.isShowMessage = false;

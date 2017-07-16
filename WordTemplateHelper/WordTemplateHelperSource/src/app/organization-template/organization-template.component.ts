@@ -18,11 +18,11 @@ export class OrganizationTemplateComponent {
     // Get references to the radio buttons so we can toggle which is selected.
     //    @ViewChild('always') alwaysRadioButton: ElementRef;
     //    @ViewChild('onlyFirstTime') onlyFirstTimeRadioButton: ElementRef;
-    public searchString: string;
-    public resultList: Array<WordTemplateInfo>;
+    private searchString: string;
+    private resultList: Array<WordTemplateInfo>;
     public message: string;
     public isShowMessage: boolean;
-    constructor(public settingsStorage: SettingsStorageService, public wordDocument: WordDocumentService, public wordTemplateApiService: WordTemplateApiService) {
+    constructor(private settingsStorage: SettingsStorageService, public wordDocument: WordDocumentService, public wordTemplateApiService: WordTemplateApiService) {
         this.searchString = "软件需求";
         this.resultList = [];
         this.isShowMessage = false;

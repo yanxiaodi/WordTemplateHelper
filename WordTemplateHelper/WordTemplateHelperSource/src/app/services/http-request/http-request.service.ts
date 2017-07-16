@@ -1,16 +1,21 @@
 import { Injectable } from '@angular/core';
-import { Http } from '@angular/http';
+import { Http  } from '@angular/http';
 import { Headers, RequestOptions } from '@angular/http';
+import { AppGlobal } from '../../common/app-global';
 
-import { GlobalService } from './../global/global.service';
-
+/**
+ * QdcHGRequestService
+ */
 @Injectable()
 export class HttpRequestService {
+    constructor(public http: Http ) {
 
-  constructor(public http: Http) { }
+    }
 
-  /**
-     * get method, get a json object
+
+    
+    /**
+     * get方法 获取json对象
      * 
      * @template T
      * @param {string} url
@@ -18,28 +23,28 @@ export class HttpRequestService {
      * 
      * @memberOf HttpRequestService
      */
-  get4Json<T>(url: string): Promise<T> {
-    return this.http.get(url).toPromise()
-      .then(response => response.json());
-  }
+    get4Json<T>(url: string): Promise<T> {
+        return this.http.get(url).toPromise()
+            .then(response => response.json());
+    }
 
 
 
+    
+    /**
+     * post方法 获取json对象
+     * 
+     * @template T
+     * @param {string} url
+     * @param {*} params
+     * @returns {Promise<T>}
+     * 
+     * @memberOf HttpRequestService
+     */
+    post4Json<T>(url: string, params: any): Promise<T> {
 
-  /**
-   * post method, get a json object
-   * 
-   * @template T
-   * @param {string} url
-   * @param {*} params
-   * @returns {Promise<T>}
-   * 
-   * @memberOf HttpRequestService
-   */
-  post4Json<T>(url: string, params: any): Promise<T> {
-
-    return this.http.post(url, params).toPromise()
-      .then(response => response.json());
-  }
+        return this.http.post(url, params).toPromise()
+            .then(response => response.json());
+    }
 
 }

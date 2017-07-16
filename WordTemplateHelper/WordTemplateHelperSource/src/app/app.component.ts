@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+// Add the RxJS Observable operators we need in this app.
+import './rxjs-operators';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+  title = 'app works!';
 }

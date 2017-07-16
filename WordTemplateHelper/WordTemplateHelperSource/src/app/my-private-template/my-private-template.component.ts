@@ -15,7 +15,7 @@ import { ButtonComponent } from '../shared/button/button.component';
 import { BrandFooterComponent } from '../shared/brand-footer/brand.footer.component';
 
 // The SettingsStorageService provides CRUD operations on application settings.
-import { SettingsStorageService, WordTemplateApiService, WordDocumentService } from '../services';
+import { SettingsStorageService, WordTemplateApiService, WordDocumentService } from '../services/index';
 import { WordTemplateInfo } from '../models/index';
 @Component({
     templateUrl: './my-private-template.component.html',
@@ -26,11 +26,11 @@ export class MyPrivateTemplateComponent {
     // Get references to the radio buttons so we can toggle which is selected.
     //    @ViewChild('always') alwaysRadioButton: ElementRef;
     //    @ViewChild('onlyFirstTime') onlyFirstTimeRadioButton: ElementRef;
-    public searchString: string;
-    public resultList: Array<WordTemplateInfo>;
+    private searchString: string;
+    private resultList: Array<WordTemplateInfo>;
     public message: string;
     public isShowMessage: boolean;
-    constructor(public settingsStorage: SettingsStorageService, public wordDocument: WordDocumentService, public wordTemplateApiService: WordTemplateApiService) {
+    constructor(private settingsStorage: SettingsStorageService, public wordDocument: WordDocumentService, public wordTemplateApiService: WordTemplateApiService) {
         this.resultList = [];
         this.isShowMessage = false;
     }
