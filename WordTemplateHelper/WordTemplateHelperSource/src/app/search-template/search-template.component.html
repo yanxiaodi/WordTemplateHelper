@@ -1,0 +1,45 @@
+<sc-navigation-header></sc-navigation-header>
+<div class="ms-MessageBanner" *ngIf="isShowMessage">
+    <div class="ms-MessageBanner-content">
+        <div class="ms-MessageBanner-text">
+            <div class="ms-MessageBanner-clipper">
+                {{message}}
+            </div>
+        </div>
+        <div class="ms-MessageBanner-action">
+            <button class="ms-MessageBanner-close" (click)="closeMessage()">
+      <i class="ms-Icon ms-Icon--eventCancel"></i>Close
+    </button>
+        </div>
+    </div>
+</div>
+<div class="ms-navigation__content">
+    <div class="ms-font-xl ms-navigation__content__title">Search Word Template</div>
+    <!--<label class="ms-Label">Keyword</label>-->
+    <!-- Assign handlers to the textEntered event for each of the text boxes. -->
+    <!--<of-textfield [innerlabel]="'input the keyword'" [id]="'searchString'" (textEntered)='onSearchTextEntered($event)'></of-textfield>-->
+    <!--<span>{{searchString}}</span>-->
+    <div class="ms-TextField  ">
+        <label class="ms-Label">Keyword</label>
+        <input class="ms-TextField-field" type="text" [(ngModel)]="searchString" placeholder="input a keyword " />
+    </div>
+    <sc-button [buttonlabel]="'Search'" (click)='search()'></sc-button>
+</div>
+
+<ul class="ms-List ">
+    <li *ngFor="let item of resultList" class="ms-ListItem" tabindex="0">
+        <span class="ms-ListItem-primaryText">{{item.Name}}</span>
+        <span class="ms-ListItem-secondaryText">download:{{item.DownloadCount}}</span>
+        <span class="ms-ListItem-tertiaryText">{{item.CreateTime | date:shortDate}}</span>
+        <span class="ms-ListItem-metaText">stars:{{item.Star}}</span>
+        <div class="ms-ListItem-selectionTarget"></div>
+        <div class="ms-ListItem-actions">
+            <div class="ms-ListItem-action" title="apply" (click)=" applyTemplate(item) "> <i class="ms-Icon ms-Icon--pencil ">
+                </i></div>
+            <div class="ms-ListItem-action " title="favorites" (click)="addFavorite(item) "><i class="ms-Icon ms-Icon--favorites "></i></div>
+            <div class="ms-ListItem-action " title="like"><i class="ms-Icon ms-Icon--heart "></i></div>
+            <div class="ms-ListItem-action " title="add to organization" (click)="addOrganization(item) "><i class="ms-Icon ms-Icon--org "></i></div>
+        </div>
+    </li>
+</ul>
+<!--<sc-brand-footer></sc-brand-footer>-->

@@ -11,7 +11,7 @@ export class WordTemplateApiService {
   constructor(public httpService: HttpRequestService, public globalService: GlobalService) { }
 
   /**
-     * 添加
+     * add
      * 
      * @param {TemplateType} type
      * @param {WordTemplateInfo} template
@@ -25,8 +25,8 @@ export class WordTemplateApiService {
     return promise;
   }
 
-  /**搜索
-   * 
+  /**
+   * search
    * 
    * @param {string} keyword
    * @returns {Promise<ResponseResultInfo<Array<WordTemplateInfo>>>}

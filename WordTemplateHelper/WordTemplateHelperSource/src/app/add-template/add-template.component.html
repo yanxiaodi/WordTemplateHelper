@@ -1,0 +1,56 @@
+<sc-navigation-header>
+</sc-navigation-header>
+<div class="ms-MessageBanner" *ngIf="isShowMessage">
+    <div class="ms-MessageBanner-content">
+        <div class="ms-MessageBanner-text">
+            <div class="ms-MessageBanner-clipper">
+                {{message}}
+            </div>
+        </div>
+        <div class="ms-MessageBanner-action">
+            <button class="ms-MessageBanner-close" (click)="closeMessage()">
+      <i class="ms-Icon ms-Icon--eventCancel"></i>Close
+    </button>
+        </div>
+    </div>
+</div>
+<div class="ms-navigation__content ">
+    <div class="ms-font-xl ms-navigation__content__title ">Upload Template</div>
+    <div class="ms-TextField  ">
+        <label class="ms-Label">Template Name</label>
+        <input class="ms-TextField-field" type="text" [(ngModel)]="templateName" placeholder="input the template name " />
+
+
+    </div>
+
+
+    <div class="ms-ChoiceFieldGroup " id="choicefieldgroup " role="radiogroup ">
+        <div class="ms-ChoiceFieldGroup-title ">
+            <label class="ms-Label is-required ">Select Template Type</label>
+        </div>
+        <ul class="ms-ChoiceFieldGroup-list ">
+            <div class="ms-RadioButton ">
+                <input style="float:left; margin-top:5px" tabindex="-1 " id="p1" name="tplType" type="radio" class="ms-RadioButton-input " (click)="setPrivateType() ">
+                <label role="radio" for="p1" class="ms-RadioButton-field " tabindex="0 " aria-checked="false" name="choicefieldgroup ">
+        <span class="ms-Label" style=" line-height:1.2">Private</span>
+    </label>
+            </div>
+            <div class="ms-RadioButton ">
+                <input style="float:left; margin-top:5px" tabindex="-1" id="p2" name="tplType" type="radio" class="ms-RadioButton-input " (click)="setPublicType() ">
+                <label role="radio" for="p2" class="ms-RadioButton-field " tabindex="0 " aria-checked="false" name="choicefieldgroup ">
+        <span class="ms-Label ">Public</span>
+    </label>
+            </div>
+            <div class="ms-RadioButton ">
+                <input style="float:left; margin-top:5px" tabindex="-1 " id="p3" name="tplType" type="radio" class="ms-RadioButton-input " (click)="setOrganizationType() ">
+                <label role="radio" for="p3" class="ms-RadioButton-field " tabindex="0 " aria-checked="false" name="choicefieldgroup ">
+        <span class="ms-Label ">Organization</span>
+    </label>
+            </div>
+        </ul>
+    </div>
+
+</div>
+<div class="ms-navigation__content ">
+    <sc-button [buttonlabel]=" 'Upload' " (click)="addTemplate($event) "> </sc-button>
+</div>
