@@ -27,10 +27,10 @@ export class AddTemplateComponent {
     public message: string;
     public isShowMessage: boolean;
 
-    constructor(private wordDocument: WordDocumentService,
-        private settingsStorage: SettingsStorageService,
+    constructor(public wordDocument: WordDocumentService,
+        public settingsStorage: SettingsStorageService,
         public wordTemplateApiService: WordTemplateApiService,
-        private router: Router) {
+        public router: Router) {
         this.templateName = "";
         this.isShowMessage = false;
     }

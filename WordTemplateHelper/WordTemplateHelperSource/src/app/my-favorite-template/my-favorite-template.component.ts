@@ -20,11 +20,11 @@ export class MyFavoriteTemplateComponent {
     // Get references to the radio buttons so we can toggle which is selected.
     //    @ViewChild('always') alwaysRadioButton: ElementRef;
     //    @ViewChild('onlyFirstTime') onlyFirstTimeRadioButton: ElementRef;
-    private searchString: string;
-    private resultList: Array<WordTemplateInfo>;
+    public searchString: string;
+    public resultList: Array<WordTemplateInfo>;
     public message: string;
     public isShowMessage: boolean;
-    constructor(private settingsStorage: SettingsStorageService, public wordDocument: WordDocumentService, 
+    constructor(public settingsStorage: SettingsStorageService, public wordDocument: WordDocumentService, 
         public wordTemplateApiService: WordTemplateApiService) {
         this.searchString = "软件需求";
         this.resultList = [];

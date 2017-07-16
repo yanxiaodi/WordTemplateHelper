@@ -4,13 +4,13 @@
   The file defines an Angular 2 component to wrap the Fabric ContextualMenu component.
 */
 
-///<reference path="../../../typings/index.d.ts"/>
+///<reference path="../../typings/index.d.ts"/>
 
 import { Component, ElementRef } from '@angular/core';
 import { Router } from '@angular/router';
 
 // The WordDocumentService provides methods for manipulating the document.
-import { WordDocumentService } from '../../services/word-document/word.document.service';
+import { WordDocumentService } from '../../services/word-document/word-document.service';
 
 @Component({
     selector: 'of-contextual-menu',
