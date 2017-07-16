@@ -3,21 +3,21 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{75D29F27-5AAB-4400-9F26-8665034A300D}</ProjectGuid>
+    <ProjectGuid>{AC4E9594-B028-4964-9785-C311CF4D8B8F}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>WordTemplateHelper</RootNamespace>
     <AssemblyName>WordTemplateHelper</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
     <TargetOfficeVersion>15.0</TargetOfficeVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{C1CDDADD-2546-481F-9697-4EA41081F2FC};{14822709-B5A1-4724-98CA-57A101D1B079};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <IncludeAssemblyInPackage>False</IncludeAssemblyInPackage>
-    <AppFeaturePartId>{aa03eafd-9289-456e-b09e-cd775cbff3ba}</AppFeaturePartId>
-    <WspPartId>{7dc972a2-65fd-4155-891e-b80522a57ced}</WspPartId>
-    <WorkflowPartId>{99c11518-57ac-4edf-9fa6-dfd0571a63d4}</WorkflowPartId>
-    <CspkgPartId>{f89c4493-3725-4765-a566-54ed49ac1335}</CspkgPartId>
-    <SqlPackagePartId>{4ee2aa1d-bd48-4b7a-9f78-f9b88a4ab749}</SqlPackagePartId>
+    <AppFeaturePartId>{3cf99db5-4a66-44ed-a6e3-ed685577e7f0}</AppFeaturePartId>
+    <WspPartId>{540b73fe-5d10-42eb-b757-9ebc80dba718}</WspPartId>
+    <WorkflowPartId>{3f89d6c4-5a38-4436-a34a-0ab087b76d93}</WorkflowPartId>
+    <CspkgPartId>{f87d6c64-bdc2-4d50-a936-678270058ec2}</CspkgPartId>
+    <SqlPackagePartId>{a0b1ca10-2418-466c-b703-be12ff75a0d5}</SqlPackagePartId>
     <ProjectMode>OfficeApp</ProjectMode>
     <MinimumVisualStudioVersion>14.0</MinimumVisualStudioVersion>
     <MinimumOfficeToolsVersion>14.0</MinimumOfficeToolsVersion>
@@ -43,7 +43,7 @@
   </PropertyGroup>
   <ItemGroup>
     <None Include="WordTemplateHelperManifest\SharePointProjectItem.spdata">
-      <SharePointProjectItemId>{e0f6b765-e18d-4775-9803-427ab14f0207}</SharePointProjectItemId>
+      <SharePointProjectItemId>{de9bda55-7054-47a1-9ff6-1f5da9200840}</SharePointProjectItemId>
     </None>
     <Content Include="WordTemplateHelperManifest\WordTemplateHelper.xml">
       <OpcRelationship>manifest-oemanifest</OpcRelationship>
@@ -51,7 +51,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\WordTemplateHelperWeb\WordTemplateHelperWeb.csproj">
-      <Project>{49DC50EA-AE46-4350-9E31-05EFE52DFD19}</Project>
+      <Project>{56C9622A-8EFC-4791-A8FA-20BCF72A9889}</Project>
       <Name>WordTemplateHelperWeb</Name>
       <Private>True</Private>
       <RoleType>Web</RoleType>

@@ -1,33 +1,32 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26228.9
+VisualStudioVersion = 15.0.26430.15
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WordTemplateHelperApi", "WordTemplateHelperApi\WordTemplateHelperApi.csproj", "{778C2B6A-8B81-40AF-821C-511C4515B83D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WordTemplateHelperApi", "WordTemplateHelperApi\WordTemplateHelperApi.csproj", "{778C2B6A-8B81-40AF-821C-511C4515B83D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WordTemplateHelper", "WordTemplateHelper\WordTemplateHelper.csproj", "{75D29F27-5AAB-4400-9F26-8665034A300D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WordTemplateHelper", "WordTemplateHelper\WordTemplateHelper.csproj", "{AC4E9594-B028-4964-9785-C311CF4D8B8F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WordTemplateHelperWeb", "WordTemplateHelperWeb\WordTemplateHelperWeb.csproj", "{49DC50EA-AE46-4350-9E31-05EFE52DFD19}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WordTemplateHelperWeb", "WordTemplateHelperWeb\WordTemplateHelperWeb.csproj", "{56C9622A-8EFC-4791-A8FA-20BCF72A9889}"
 EndProject
-Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "WordTemplateHelperSource", "WordTemplateHelperSource\", "{63808157-2AB3-46AC-A77B-E5B124D9820C}"
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "WordTemplateHelperSource(1)", "WordTemplateHelperSource\", "{AE1F745B-C11F-4E53-B6F9-B7E2FCBABD94}"
 	ProjectSection(WebsiteProperties) = preProject
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
-		Debug.AspNetCompiler.VirtualPath = "/localhost_37586"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_62944"
 		Debug.AspNetCompiler.PhysicalPath = "WordTemplateHelperSource\"
-		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_37586\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_62944\"
 		Debug.AspNetCompiler.Updateable = "true"
 		Debug.AspNetCompiler.ForceOverwrite = "true"
 		Debug.AspNetCompiler.FixedNames = "false"
 		Debug.AspNetCompiler.Debug = "True"
-		Release.AspNetCompiler.VirtualPath = "/localhost_37586"
+		Release.AspNetCompiler.VirtualPath = "/localhost_62944"
 		Release.AspNetCompiler.PhysicalPath = "WordTemplateHelperSource\"
-		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_37586\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_62944\"
 		Release.AspNetCompiler.Updateable = "true"
 		Release.AspNetCompiler.ForceOverwrite = "true"
 		Release.AspNetCompiler.FixedNames = "false"
 		Release.AspNetCompiler.Debug = "False"
-		VWDPort = "37586"
-		SlnRelativePath = "WordTemplateHelperSource\"
+		VWDPort = "62944"
 	EndProjectSection
 EndProject
 Global
@@ -40,20 +39,20 @@ Global
 		{778C2B6A-8B81-40AF-821C-511C4515B83D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{778C2B6A-8B81-40AF-821C-511C4515B83D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{778C2B6A-8B81-40AF-821C-511C4515B83D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{75D29F27-5AAB-4400-9F26-8665034A300D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{75D29F27-5AAB-4400-9F26-8665034A300D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{75D29F27-5AAB-4400-9F26-8665034A300D}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
-		{75D29F27-5AAB-4400-9F26-8665034A300D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{75D29F27-5AAB-4400-9F26-8665034A300D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{75D29F27-5AAB-4400-9F26-8665034A300D}.Release|Any CPU.Deploy.0 = Release|Any CPU
-		{49DC50EA-AE46-4350-9E31-05EFE52DFD19}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{49DC50EA-AE46-4350-9E31-05EFE52DFD19}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{49DC50EA-AE46-4350-9E31-05EFE52DFD19}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{49DC50EA-AE46-4350-9E31-05EFE52DFD19}.Release|Any CPU.Build.0 = Release|Any CPU
-		{63808157-2AB3-46AC-A77B-E5B124D9820C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{63808157-2AB3-46AC-A77B-E5B124D9820C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{63808157-2AB3-46AC-A77B-E5B124D9820C}.Release|Any CPU.ActiveCfg = Debug|Any CPU
-		{63808157-2AB3-46AC-A77B-E5B124D9820C}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{AC4E9594-B028-4964-9785-C311CF4D8B8F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC4E9594-B028-4964-9785-C311CF4D8B8F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC4E9594-B028-4964-9785-C311CF4D8B8F}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{AC4E9594-B028-4964-9785-C311CF4D8B8F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC4E9594-B028-4964-9785-C311CF4D8B8F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AC4E9594-B028-4964-9785-C311CF4D8B8F}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{56C9622A-8EFC-4791-A8FA-20BCF72A9889}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56C9622A-8EFC-4791-A8FA-20BCF72A9889}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56C9622A-8EFC-4791-A8FA-20BCF72A9889}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56C9622A-8EFC-4791-A8FA-20BCF72A9889}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE1F745B-C11F-4E53-B6F9-B7E2FCBABD94}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE1F745B-C11F-4E53-B6F9-B7E2FCBABD94}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE1F745B-C11F-4E53-B6F9-B7E2FCBABD94}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE1F745B-C11F-4E53-B6F9-B7E2FCBABD94}.Release|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

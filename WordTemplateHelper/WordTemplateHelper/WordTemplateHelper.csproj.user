@@ -1,13 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <GeneratedFeatureId>465d806c-1f17-40b0-b778-233a1a941364</GeneratedFeatureId>
-    <GeneratedPackageId>a921d47b-96ee-417f-a471-9aa625e63feb</GeneratedPackageId>
-    <GeneratedModuleId>{a1702570-6b1d-4ed5-8d8e-095edb3beb78}</GeneratedModuleId>
-    <GeneratedListId>{b8affd5f-b5db-4ee9-8673-0a45542093c6}</GeneratedListId>
-    <GeneratedProductId>{429cd787-b32b-49cd-b4bc-e7e014fe31ee}</GeneratedProductId>
+    <GeneratedFeatureId>579765e4-f614-46a2-b5e3-8f9c2d3c67e3</GeneratedFeatureId>
+    <GeneratedPackageId>a3c7ce3e-86b1-4b67-adde-4d7cc21fa975</GeneratedPackageId>
+    <GeneratedModuleId>{6dd602a3-0c9b-47f6-9b51-8bae16bc109b}</GeneratedModuleId>
+    <GeneratedListId>{d4302915-5c48-43a9-94c1-e508d6069ad9}</GeneratedListId>
+    <GeneratedProductId>{ea3affbc-8327-41be-9141-b127c193c1d9}</GeneratedProductId>
     <GeneratedAppVersion>1.0.0.0</GeneratedAppVersion>
-    <GeneratedClientSecret>dMquBD/YCJBQbJNX2BxpOv57w4noE4qgIl4zlIh2Lj0=</GeneratedClientSecret>
-    <ProjectView>ShowAllFiles</ProjectView>
+    <GeneratedClientSecret>1E7a2PviKyZ7NlY3g9EG0kAaHnblw6R8eh+0H/05l1M=</GeneratedClientSecret>
   </PropertyGroup>
 </Project>

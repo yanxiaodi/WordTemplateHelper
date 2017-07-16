@@ -1,54 +1,52 @@
-﻿/// <reference path="/Scripts/FabricUI/MessageBanner.js" />
-
-
+﻿
 (function () {
     "use strict";
 
     var messageBanner;
 
-    // 每次加载新页面时都必须运行初始化函数。
+    // The initialize function must be run each time a new page is loaded.
     Office.initialize = function (reason) {
         $(document).ready(function () {
-            // 初始化 FabricUI 通知机制并隐藏
+            // Initialize the FabricUI notification mechanism and hide it
             var element = document.querySelector('.ms-MessageBanner');
             messageBanner = new fabric.MessageBanner(element);
             messageBanner.hideBanner();
 
-            // 如果未使用 Word 2016，请使用回退逻辑。
+            // If not using Word 2016, use fallback logic.
             if (!Office.context.requirements.isSetSupported('WordApi', '1.1')) {
-                $("#template-description").text("此示例显示选定的文本。");
-                $('#button-text').text("显示!");
-                $('#button-desc').text("显示选定的文本");
+                $("#template-description").text("This sample displays the selected text.");
+                $('#button-text').text("Display!");
+                $('#button-desc').text("Display the selected text");
                 
                 $('#highlight-button').click(displaySelectedText);
                 return;
             }
 
-            $("#template-description").text("此示例突出显示文档中选定文本中的最长单词。");
-            $('#button-text').text("突出显示!");
-            $('#button-desc').text("突出显示最长单词。");
+            $("#template-description").text("This sample highlights the longest word in the text you have selected in the document.");
+            $('#button-text').text("Highlight!");
+            $('#button-desc').text("Highlights the longest word.");
             
             loadSampleData();
 
-            // 为突出显示按钮添加单击事件处理程序。
+            // Add a click event handler for the highlight button.
             $('#highlight-button').click(hightlightLongestWord);
         });
     };
 
     function loadSampleData() {
-        // 针对 Word 对象模型运行批处理操作。
+        // Run a batch operation against the Word object model.
         Word.run(function (context) {
-            // 为文档正文创建代理对象。
+            // Create a proxy object for the document body.
             var body = context.document.body;
 
-            // 将清空正文内容的命令插入队列。
+            // Queue a commmand to clear the contents of the body.
             body.clear();
-            // 将在 Word 文档正文结束位置插入文本的命令插入队列。
+            // Queue a command to insert text into the end of the Word document body.
             body.insertText(
                 "This is a sample text inserted in the document",
                 Word.InsertLocation.end);
 
-            // 通过执行排队的命令来同步文档状态，并返回承诺以表示任务完成。
+            // Synchronize the document state by executing the queued commands, and return a promise to indicate task completion.
             return context.sync();
         })
         .catch(errorHandler);
@@ -56,34 +54,34 @@
 
     function hightlightLongestWord() {
         Word.run(function (context) {
-            // 将获取当前选定内容的命令插入队列，然后
-            // 创建包含结果的代理范围对象。
+            // Queue a command to get the current selection and then
+            // create a proxy range object with the results.
             var range = context.document.getSelection();
             
-            // 此变量将保存最长单词的搜索结果。
+            // This variable will keep the search results for the longest word.
             var searchResults;
             
-            // 将加载范围选择结果的命令插入队列。
+            // Queue a command to load the range selection result.
             context.load(range, 'text');
 
-            // 通过执行排队的命令来同步文档状态
-            // 并返回承诺以表示任务完成。
+            // Synchronize the document state by executing the queued commands
+            // and return a promise to indicate task completion.
             return context.sync()
                 .then(function () {
-                    // 获取选定内容中最长的单词。
+                    // Get the longest word from the selection.
                     var words = range.text.split(/\s+/);
                     var longestWord = words.reduce(function (word1, word2) { return word1.length > word2.length ? word1 : word2; });
 
-                    // 将搜索命令排队。
+                    // Queue a search command.
                     searchResults = range.search(longestWord, { matchCase: true, matchWholeWord: true });
 
-                    // 将加载结果的字体属性的命令插入队列。
+                    // Queue a commmand to load the font property of the results.
                     context.load(searchResults, 'font');
                 })
                 .then(context.sync)
                 .then(function () {
-                    // 将突出显示搜索结果的命令插入队列。
-                    searchResults.items[0].font.highlightColor = '#FFFF00'; // 黄色
+                    // Queue a command to highlight the search results.
+                    searchResults.items[0].font.highlightColor = '#FFFF00'; // Yellow
                     searchResults.items[0].font.bold = true;
                 })
                 .then(context.sync);
@@ -96,9 +94,9 @@
         Office.context.document.getSelectedDataAsync(Office.CoercionType.Text,
             function (result) {
                 if (result.status === Office.AsyncResultStatus.Succeeded) {
-                    showNotification('选定的文本为:', '"' + result.value + '"');
+                    showNotification('The selected text is:', '"' + result.value + '"');
                 } else {
-                    showNotification('错误:', result.error.message);
+                    showNotification('Error:', result.error.message);
                 }
             });
     }
@@ -106,14 +104,14 @@
     //$$(Helper function for treating errors, $loc_script_taskpane_home_js_comment34$)$$
     function errorHandler(error) {
         // $$(Always be sure to catch any accumulated errors that bubble up from the Word.run execution., $loc_script_taskpane_home_js_comment35$)$$
-        showNotification("错误:", error);
+        showNotification("Error:", error);
         console.log("Error: " + error);
         if (error instanceof OfficeExtension.Error) {
             console.log("Debug info: " + JSON.stringify(error.debugInfo));
         }
     }
 
-    // 用于显示通知的帮助程序函数
+    // Helper function for displaying notifications
     function showNotification(header, content) {
         $("#notification-header").text(header);
         $("#notification-body").text(content);

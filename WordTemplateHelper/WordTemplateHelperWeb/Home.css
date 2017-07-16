@@ -1,11 +1,11 @@
-﻿/* 特定于页面的样式 */
+﻿/* Page-specific styling */
 
 html {
     position: relative;
     min-height: 100%;
 }
 body {
-    margin: 0 0 40px; /* 底部 = 页脚高度 */
+    margin: 0 0 40px; /* bottom = footer height */
 }
 .footer {
     position: absolute;
