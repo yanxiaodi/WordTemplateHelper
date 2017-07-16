@@ -3,9 +3,9 @@
  */
 export class BaseResponseResultInfo {
     /**是否成功 */
-    IsSuccess: boolean;
+    isSuccess: boolean;
     /**响应信息 */
-    Message: string;
+    message: string;
     constructor() {
 
     }
@@ -16,5 +16,5 @@ export class BaseResponseResultInfo {
  */
 export class ResponseResultInfo<T> extends BaseResponseResultInfo {
     /**响应结果实体 */
-    Result: T;
+    result: T;
 }

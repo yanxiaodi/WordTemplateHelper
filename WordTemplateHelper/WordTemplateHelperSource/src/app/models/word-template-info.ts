@@ -3,14 +3,14 @@ import { TemplateType } from './enum-defines'
  * WordTemplate
  */
 export class WordTemplateInfo {
-    public Id: string;
-    public Name: string;
-    public Star: number;
-    public DownloadCount: number;
-    public ImageUrl: string;
-    public TemplateContent: string;
-    public Type: TemplateType;
-    public CreateTime: string;
+    public id: string;
+    public name: string;
+    public star: number;
+    public downloadCount: number;
+    public imageUrl: string;
+    public templateContent: string;
+    public type: TemplateType;
+    public createTime: string;
 
     constructor() {
 

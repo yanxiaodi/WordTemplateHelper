@@ -1,12 +1,16 @@
 // Copyright (c) Microsoft. All rights reserved. Licensed under the MIT license. See full license at the bottom of this file.
 "use strict";
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+var __decorate = (this && this.__decorate) || function(decorators, target, key, desc) {
+    var c = arguments.length,
+        r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc,
+        d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    else
+        for (var i = decorators.length - 1; i >= 0; i--)
+            if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-var __metadata = (this && this.__metadata) || function (k, v) {
+var __metadata = (this && this.__metadata) || function(k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 /*
@@ -20,7 +24,7 @@ var word_document_service_1 = require('../services/word-document/word.document.s
 // The SettingsStorageService provides CRUD operations on application settings..
 var index_1 = require('../services/index');
 var index_2 = require('../models/index');
-var AddTemplateComponent = (function () {
+var AddTemplateComponent = (function() {
     function AddTemplateComponent(wordDocument, settingsStorage, wordTemplateApiService, router) {
         this.wordDocument = wordDocument;
         this.settingsStorage = settingsStorage;
@@ -32,17 +36,15 @@ var AddTemplateComponent = (function () {
     // onTemplateNameEntered(message: string): void {
     //     this.templateName = message;
     // }
-    AddTemplateComponent.prototype.addTemplate = function () {
+    AddTemplateComponent.prototype.addTemplate = function() {
         var _this = this;
         if (this.templateName == "") {
             this.message = "Please input the template name!";
             this.isShowMessage = true;
-        }
-        else if (this.templateType == null || this.templateType == undefined) {
+        } else if (this.templateType == null || this.templateType == undefined) {
             this.message = "Please select the template type!";
             this.isShowMessage = true;
-        }
-        else {
+        } else {
             var tpl_1 = new index_2.WordTemplateInfo();
             // Run a batch operation against the Word object model.
             // Word.run(function (context) {
@@ -62,12 +64,12 @@ var AddTemplateComponent = (function () {
             //         tpl.Type = this.templateType;
             //         this.(this.templateType, tpl)
             //             .then(response => {
-            //                 if (response.IsSuccess) {
+            //                 if (response.isSuccess) {
             //                     this.message = "Upload done!";
             //                     this.isShowMessage = true;
             //                 }
             //                 else {
-            //                     this.message = "Upload failed!" + response.Message;
+            //                     this.message = "Upload failed!" + response.message;
             //                     this.isShowMessage = true;
             //                 }
             //             })
@@ -84,7 +86,7 @@ var AddTemplateComponent = (function () {
             //         }
             //     });
             //TODO
-            this.wordDocument.getOoxml().then(function (value) {
+            this.wordDocument.getOoxml().then(function(value) {
                 tpl_1.DownloadCount = 0;
                 tpl_1.ImageUrl = "";
                 tpl_1.Name = _this.templateName;
@@ -92,42 +94,41 @@ var AddTemplateComponent = (function () {
                 tpl_1.TemplateContent = value;
                 tpl_1.Type = _this.templateType;
                 _this.wordTemplateApiService.addWordTemplate(_this.templateType, tpl_1)
-                    .then(function (response) {
-                    if (response.IsSuccess) {
-                        _this.message = "Upload done!";
+                    .then(function(response) {
+                        if (response.isSuccess) {
+                            _this.message = "Upload done!";
+                            _this.isShowMessage = true;
+                            _this.templateName = "";
+                        } else {
+                            _this.message = "Upload failed!" + response.message;
+                            _this.isShowMessage = true;
+                        }
+                    })
+                    .catch(function(error) {
+                        _this.message = "Upload failed!";
                         _this.isShowMessage = true;
-                        _this.templateName = "";
-                    }
-                    else {
-                        _this.message = "Upload failed!" + response.Message;
-                        _this.isShowMessage = true;
-                    }
-                })
-                    .catch(function (error) {
-                    _this.message = "Upload failed!";
-                    _this.isShowMessage = true;
-                });
+                    });
             });
         }
     };
-    AddTemplateComponent.prototype.closeMessage = function () {
+    AddTemplateComponent.prototype.closeMessage = function() {
         this.message = "";
         this.isShowMessage = false;
     };
-    AddTemplateComponent.prototype.setPrivateType = function () {
+    AddTemplateComponent.prototype.setPrivateType = function() {
         this.templateType = index_2.TemplateType.Private;
     };
-    AddTemplateComponent.prototype.setPublicType = function () {
+    AddTemplateComponent.prototype.setPublicType = function() {
         this.templateType = index_2.TemplateType.Public;
     };
-    AddTemplateComponent.prototype.setOrganizationType = function () {
+    AddTemplateComponent.prototype.setOrganizationType = function() {
         this.templateType = index_2.TemplateType.Organization;
     };
     AddTemplateComponent = __decorate([
         core_1.Component({
             templateUrl: 'app/add-template/add-template.component.html',
             styleUrls: ['app/add-template/add-template.component.css']
-        }), 
+        }),
         __metadata('design:paramtypes', [word_document_service_1.WordDocumentService, index_1.SettingsStorageService, index_1.WordTemplateApiService, router_1.Router])
     ], AddTemplateComponent);
     return AddTemplateComponent;

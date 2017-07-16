@@ -46,13 +46,13 @@ export class SearchTemplateComponent implements OnInit {
       .then(response => {
         console.log("获得返回值");
 
-        if (response.IsSuccess) {
+        if (response.isSuccess) {
           console.log("获取数据成功");
 
-          response.Result.forEach(x => this.resultList.push(x));
+          response.result.forEach(x => this.resultList.push(x));
         }
         else {
-          this.message = "No results!" + response.Message;
+          this.message = "No results!" + response.message;
           this.isShowMessage = true;
         }
       })
@@ -68,7 +68,7 @@ export class SearchTemplateComponent implements OnInit {
   }
 
   applyTemplate(template: WordTemplateInfo) {
-    this.wordDocument.setOoxml(template.TemplateContent);
+    this.wordDocument.setOoxml(template.templateContent);
   }
 
   addFavorite(template: WordTemplateInfo) {
@@ -76,13 +76,13 @@ export class SearchTemplateComponent implements OnInit {
       .then(response => {
         console.log("获得返回值");
 
-        if (response.IsSuccess) {
+        if (response.isSuccess) {
           console.log("获取数据成功");
-          this.message = "Done!" + response.Message;
+          this.message = "Done!" + response.message;
           this.isShowMessage = true;
         }
         else {
-          this.message = "Add to favorites failed!" + response.Message;
+          this.message = "Add to favorites failed!" + response.message;
           this.isShowMessage = true;
         }
       })
@@ -97,13 +97,13 @@ export class SearchTemplateComponent implements OnInit {
       .then(response => {
         console.log("获得返回值");
 
-        if (response.IsSuccess) {
+        if (response.isSuccess) {
           console.log("获取数据成功");
-          this.message = "Done!" + response.Message;
+          this.message = "Done!" + response.message;
           this.isShowMessage = true;
         }
         else {
-          this.message = "Add to organization failed!" + response.Message;
+          this.message = "Add to organization failed!" + response.message;
           this.isShowMessage = true;
         }
       })

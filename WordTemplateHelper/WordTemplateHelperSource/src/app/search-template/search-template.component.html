@@ -28,10 +28,10 @@
 
 <ul class="ms-List ">
     <li *ngFor="let item of resultList" class="ms-ListItem" tabindex="0">
-        <span class="ms-ListItem-primaryText">{{item.Name}}</span>
-        <span class="ms-ListItem-secondaryText">download:{{item.DownloadCount}}</span>
-        <span class="ms-ListItem-tertiaryText">{{item.CreateTime | date:shortDate}}</span>
-        <span class="ms-ListItem-metaText">stars:{{item.Star}}</span>
+        <span class="ms-ListItem-primaryText">{{item.name}}</span>
+        <span class="ms-ListItem-secondaryText">download:{{item.downloadCount}}</span>
+        <span class="ms-ListItem-tertiaryText">{{item.createTime | date:shortDate}}</span>
+        <span class="ms-ListItem-metaText">stars:{{item.star}}</span>
         <div class="ms-ListItem-selectionTarget"></div>
         <div class="ms-ListItem-actions">
             <div class="ms-ListItem-action" title="apply" (click)=" applyTemplate(item) "> <i class="ms-Icon ms-Icon--pencil ">

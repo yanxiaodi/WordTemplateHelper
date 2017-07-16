@@ -29,6 +29,13 @@ namespace WordTemplateHelperApi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            #region 跨域
+            services.AddCors(options =>
+            options.AddPolicy("AllowCrossDomain",
+            builder => builder.WithOrigins().AllowAnyMethod().AllowAnyHeader().AllowAnyOrigin().AllowCredentials())
+            );
+            
+            #endregion
             // Add framework services.
             services.AddDbContext<WordTemplateContext>(options =>
             options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));

@@ -53,21 +53,21 @@ export class AddTemplateComponent {
 
             //TODO
             this.wordDocument.getOoxml().then(value => {
-                tpl.DownloadCount = 0;
-                tpl.ImageUrl = "";
-                tpl.Name = this.templateName;
-                tpl.Star = 0;
-                tpl.TemplateContent = value;
-                tpl.Type = this.templateType;
+                tpl.downloadCount = 0;
+                tpl.imageUrl = "";
+                tpl.name = this.templateName;
+                tpl.star = 0;
+                tpl.templateContent = value;
+                tpl.type = this.templateType;
                 this.wordTemplateApiService.addWordTemplate(this.templateType, tpl)
                     .then(response => {
-                        if (response.IsSuccess) {
+                        if (response.isSuccess) {
                             this.message = "Upload done!";
                             this.isShowMessage = true;
                             this.templateName = "";
                         }
                         else {
-                            this.message = "Upload failed!" + response.Message;
+                            this.message = "Upload failed!" + response.message;
                             this.isShowMessage = true;
                         }
                     })

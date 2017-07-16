@@ -7,11 +7,13 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using WordTemplateHelperApi.Data;
 using WordTemplateHelperApi.Models;
+using Microsoft.AspNetCore.Cors;
 
 namespace WordTemplateHelperApi.Controllers
 {
     [Produces("application/json")]
     [Route("api/WordTemplate/[action]")]
+    [EnableCors("AllowCrossDomain")]
     public class WordTemplateController : Controller
     {
         private readonly WordTemplateContext _context;

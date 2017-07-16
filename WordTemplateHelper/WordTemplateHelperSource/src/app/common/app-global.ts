@@ -8,12 +8,12 @@ export class AppGlobal {
 
 
     /**
-     * 服务器地址
+     * api url
      * 
      * @type {string}
      * @memberOf AppGlobal
      */
-    public server: string = "http://localhost:5000/api/WordTemplate";
+    public server: string = "http://localhost:8738/api/WordTemplate";
 
 
     /**当前用户信息 */
