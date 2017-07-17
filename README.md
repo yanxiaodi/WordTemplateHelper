@@ -1,6 +1,9 @@
 # WordTemplateHelper
 This repo is an Office Add-in sample, which demonstrates how to create an Office Word Add-In project, including APIs and add-in.
 
+You can find the details of this code demo from the link(by Chinese):
+[How to Create an Office Word Add-In, including APIs and Add-In](http://www.cnblogs.com/yanxiaodi/p/7192280.html)
+
 ## How to run the project
 First clone this repo to your local disk. Open the solution with VS 2017.
 
