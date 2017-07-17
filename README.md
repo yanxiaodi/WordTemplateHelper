@@ -44,10 +44,6 @@ The solution contains these projects:
 
 Users can upload local documents as a template to the server, and search, download, and apply them to local documents.
 
-## Note
-
-This project is based on a sample project of Microsoft. Do not use the code of this demo for any commercial purpose.
-
 
 ### Contact
 yan_xiaodi@hotmail.com
